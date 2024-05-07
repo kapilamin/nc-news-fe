@@ -12,7 +12,7 @@ export const ArticleCard = ({article}) => {
                 <p>Topic: {article.topic}</p>
                 <p>Author: {article.author}</p>
                 <p>Date created: {timeSinceDate(new Date(article.created_at))}</p>
-                <p>Comments: {article.comment_count}</p>
+                <p>Number of Comments: {article.comment_count}</p>
                 <p>Votes: {article.votes}</p>
                 <button className='button-up'>Up vote</button>
                 <button className='button-down'>Down vote</button>
