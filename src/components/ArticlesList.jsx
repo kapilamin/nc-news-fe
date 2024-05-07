@@ -22,7 +22,6 @@ export const ArticlesList = () => {
 
     return (
         <section className="articles-list">
-            <h2 className="articles-list-title">Some News</h2>
             <ul>
                 {articlesList.map((article) => {
                     return <ArticleCard article={article} key={article.article_id}/>
