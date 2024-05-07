@@ -68,3 +68,17 @@ img {
   border-radius: 10px;
   box-shadow: 10px 10px rgba(198, 15, 215, 0.503);
 }
+
+.single-article{
+  background: rgb(212, 220, 245);
+  padding: 2em;
+  margin: 1em 1em;
+  width: 20em;
+  height: 30em;
+  border: #2a83f0;
+  border-width: 0.15cm;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  object-fit: cover;
+  border-style: solid;
+  border-radius: 10px;
+}
