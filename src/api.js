@@ -38,3 +38,10 @@ export const postNewComment = (newComment, article_id) => {
         return response.data
     })
 }
+
+export const deleteCommentById = (comment_id) => {
+    return ncNewsApi.delete(`comments/${comment_id}`)
+    .then((response) => {
+        return response.data
+    })
+}

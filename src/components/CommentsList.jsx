@@ -42,7 +42,6 @@ export const CommentsList = () => {
             setErr(null);
         })
         .catch((err) => {
-            console.error("Error encountered", err);
             setErr("Sorry there has been an error. Please try again")
         });
         
@@ -69,13 +68,14 @@ export const CommentsList = () => {
                 <label htmlFor="new-comment_body" className="add-comment-label">
                     New comment: 
                 </label>
-                    <input
+                    <textarea
                         type="text"
                         required
                         className="add-comment-input"
                         id="new-comment_body"
                         onChange={handleNewCommentInput}
                         value={newComment.body}
+                        placeholder="Write your comment here"
                     />
                 <button className="add-new-comment-submit">Add comment</button>    
             </form>
