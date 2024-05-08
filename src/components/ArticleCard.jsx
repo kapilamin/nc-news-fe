@@ -36,7 +36,7 @@ export const ArticleCard = ({article}) => {
                     <img className='article-image' src={article.article_img_url} alt="image of the article"/>
                     <p>Topic: {article.topic}</p>
                     <p>Author: {article.author}</p>
-                    <p>Date created: {timeSinceDate(new Date(article.created_at))}</p>
+                    <p>Created: {timeSinceDate(new Date(article.created_at))}</p>
                     <p>Number of Comments: {article.comment_count}</p>
                     <p>Votes: {totalVotes}</p>
                 </li>
