@@ -36,15 +36,15 @@ export const CommentsList = () => {
 
         postNewComment(newComment, article_id)
         .then((response) => {
-            setCommentsList((commentSuccess) => {
-                return [response, ...commentsList];
+            setCommentsList((commentsList) => {return [response, ...commentsList];
             });
-            setErr(null);
             setCommentSuccess(true)
-            .catch((err) => {
-                setErr("Sorry there has been an error. Please try again")
-            });
+            setErr(null);
         })
+        .catch((err) => {
+            console.error("Error encountered", err);
+            setErr("Sorry there has been an error. Please try again")
+        });
         
         setCommentSuccess(false)
         setNewComment({
