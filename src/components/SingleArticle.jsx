@@ -31,7 +31,7 @@ export const SingleArticle = () => {
             <img src={singleArticle.article_img_url}/>
             <p>{singleArticle.body}</p>
         </section>
-        <section>
+        <section className="comments-list">
             <CommentsList />
         </section>
         </>

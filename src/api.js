@@ -31,3 +31,10 @@ export const updateArticleVotes = (article_id, inc_votes) => {
         return response.data
     })
 }
+
+export const postNewComment = (newComment, article_id) => {
+    return ncNewsApi.post(`articles/${article_id}/comments`, newComment)
+    .then((response) => {
+        return response.data
+    })
+}

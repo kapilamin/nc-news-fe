@@ -16,6 +16,7 @@ export const ArticleCard = ({article}) => {
             setErr(null);
             updateArticleVotes(article.article_id, vote)
                 .catch((err) => {
+                    console.error("Error encountered", err);
                     setVoteChange(0); 
                     setErr("Voting error, please try again");
                 });
