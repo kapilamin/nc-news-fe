@@ -122,3 +122,27 @@ img {
   border-style: solid;
   border-radius: 10px;
 }
+
+.add-new-comment-submit{
+  background: #0fdc50;
+  color: black;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 1em 1em;
+  border-radius: 5px;
+  border: none;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 1rem;
+}
+
+#delete-comment-button {
+  background: rgb(165, 6, 6);
+  color: white;
+  padding: 0.5em 1em;
+  margin: 1em 1em;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
