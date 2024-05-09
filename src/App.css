@@ -113,7 +113,7 @@ a {
 
 .single-article{
   display: inline-block;
-  background: rgb(212, 220, 245) !important;
+  background: rgb(212, 220, 245);
   padding: 2em !important;
   margin: 1em 1em;
   width: fit-content;
@@ -127,7 +127,6 @@ a {
 
 .topic-list-item {
   text-align: center;
-  color: gold;
   font-weight: bold;
   font-size: 1rem;
   font-family: "Lucida Console", "Courier New", monospace;
@@ -174,8 +173,9 @@ ul {
   margin: 0.5em 1em;
   border-radius: 10px;
   border: none;
-  font-family: 'Zilla Slab', sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;  
 }
 
@@ -191,8 +191,9 @@ ul {
   margin: 0.5em 1em;
   border-radius: 10px;
   border: none;
-  font-family: 'Zilla Slab', sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;  
 }
 
