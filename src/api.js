@@ -6,9 +6,9 @@ const ncNewsApi = axios.create({
 
 const handleResponse = (response) => response.data;
 
-export const getArticles = (topic) => {
+export const getArticles = (topic, sort_by, order) => {
     return ncNewsApi.get("articles", {
-        params: { topic }
+        params: { topic, sort_by, order }
     }).then(handleResponse);
 }
 
@@ -28,9 +28,9 @@ export const updateArticleVotes = (article_id, inc_votes) => {
     .then(handleResponse);
 }
 
-export const postNewComment = (article_id, newComment) => {
+export const postNewComment = (newComment, article_id) => {
     return ncNewsApi.post(`articles/${article_id}/comments`, newComment)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 export const deleteCommentById = (comment_id) => {
