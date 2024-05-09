@@ -3,22 +3,82 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none; 
 }
 
 .header-container {
+  background-color: #54c4f0;
+  color: #333;
   display: flex;
-  width: 100%;
-  height: 120px;
+  flex-direction: column;
   align-items: center;
-  background-color: #1ab2e0;
-  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
 }
+
+.user-info {
+  margin-left: 400px;
+  margin-bottom: 10px;
+  color: #061463;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nc-news-title {
+  font-size: 30px;
+  color: #342bdd;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.nc-news-title:hover {
+  color: #9e2f1b;
+}
+
+.link-container {
+  display: flex;
+  gap: 10px;
+}
+
+.header-link {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  background-color: #9e2f1b;
+  color: rgb(244, 236, 31);
+}
+
+
+
+
 .articles-list {
   display: flex;
   justify-content: center;
 }
+
+.article-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
 .article-card {
   display: inline-block;
   background: rgb(212, 220, 245);
@@ -27,13 +87,20 @@
   width: 20em;
   height: 33em;
   border: #2a83f0;
-  border-width: 0.15cm;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-width: 0.1cm;
   object-fit: cover;
   border-style: solid;
   border-radius: 10px;
+  text-decoration: none;
 }
 
+.article-card img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px rgba(198, 15, 215, 0.503);
+}
 .article-card-content {
   width: 100%;
   padding-top: 15px;
@@ -51,7 +118,7 @@
   margin: 1em 1em;
   width: fit-content;
   height: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -60,18 +127,31 @@
 
 .topic-list-item {
   text-align: center;
-  color: white;
+  color: gold;
   font-weight: bold;
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
   padding: 10px 10px;
   margin: 20px;
   display: inline-flex;
   text-decoration: none;
   border-radius: 10px;
-  background-color: #83B692;
+  background-color: #9f47f7;
   cursor: pointer;
 }
+
+.topic-list-item:hover {
+  background-color: #b991e1;
+}
+
+.topic-list-item h4 {
+  color: gold;
+}
+
+.topic-list-item h4:hover {
+  color: black;
+}
+
 
 .link-container {
   flex: 0 0 75%;
@@ -96,47 +176,49 @@ ul {
   border: none;
   font-family: 'Zilla Slab', sans-serif;
   font-size: 1rem;
-  cursor: pointer;
-  
+  cursor: pointer;  
+}
+
+.button-up:hover {
+  background-color: #367C39; 
+  color: #E8E8E8; 
 }
 
 .button-down {
-  background: #ea300f;
-  color: black;
+  background: rgb(165, 6, 6);
+  color: white;
   padding: 0.5em 1em;
   margin: 0.5em 1em;
   border-radius: 10px;
   border: none;
   font-family: 'Zilla Slab', sans-serif;
   font-size: 1rem;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
-
-.article-card img {
-  width: 10em;
-  height: 10em;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 10px 10px rgba(198, 15, 215, 0.503);
+.button-down:hover {
+  background-color: #be4934;
 }
-
 
 .add-comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
   background-color: rgb(173, 195, 239);
   border-radius: 10px;
+  padding: 5px;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 
 .add-comment-input {
-  width: 400px;
+  width: 100%; 
+  max-width: 400px;
   height: 100px;
   margin-bottom: 1rem;
-  margin-top: 1 rem;
+  margin-top: 1rem;
 }
-
 
 #comment-success-text {
   color: rgb(3, 95, 3);
@@ -160,7 +242,11 @@ ul {
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1rem;
   cursor: pointer;
+}
 
+.add-new-comment-submit:hover {
+  background-color: #367C39; 
+  color: #E8E8E8; 
 }
 
 #delete-comment-button {
@@ -174,6 +260,10 @@ ul {
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
   cursor: pointer;
+}
+
+#delete-comment-button:hover {
+  background-color: #be4934;
 }
 
 .user-list-item {
@@ -196,4 +286,34 @@ ul {
 
 #user {
   font-size: medium;
+}
+
+#article-card-title {
+  font-size: 20px;
+  color: #1464c7;
+}
+
+.title-container {
+  flex: 0 0 25%;
+  
+}
+
+.title-container h1 {
+  color: #920f87;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.link-container a {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding: 14px 16px;
+  display: block;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #de4c39;
+  cursor: pointer;
 }
