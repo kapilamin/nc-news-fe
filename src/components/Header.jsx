@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <header className="header-container">
           <div className="user-info">
-            You are signed in as {loggedInUser.username}
+            <Link to={"/ncnews/users"}>You are signed in as {loggedInUser.username}</Link>
           </div>
           <div className="header-content">
             <Link to={'/'}>
