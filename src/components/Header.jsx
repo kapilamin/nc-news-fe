@@ -8,22 +8,26 @@ export const Header = () => {
         <>
         <header className="header-container">
             <div className="title-container">
-            <h1 className="nc-news">NC News</h1>
-            <p>Your daily dose of news!</p>
+                <Link to={'/'} className="nc-news-home">
+                    <h1>NC News</h1>
+                </Link>
             </div>
             <nav className="link-container">
                 <Link to={"/"} className="header-link">
-                    <p>Home</p>
+                    Home
                 </Link>
                 <Link to={"/ncnews/users"} className="header-link">
-                    <p>Users</p>
+                    Users
                 </Link>
                 <Link to={"/ncnews/topics"} className="header-link">
-                    <p>Topics</p>
+                    Topics
                 </Link>
-                <p className="header-link">Login</p>
-                <Link className="link" to={"/users"}>
-                <h3 id="user">You are signed in as {loggedInUser.username}</h3>
+                <Link to={"/ncnews/login"}>
+                    Login
+                </Link>
+                <Link className="link" to={"/ncnews/users"}>
+                <h3 id="user">You are signed in as </h3>
+                <p>{loggedInUser.username}</p>
                 </Link>
             </nav>
         </header>

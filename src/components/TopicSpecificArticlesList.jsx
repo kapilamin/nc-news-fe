@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getArticles, getTopics } from "../api";
 import { ArticleCard } from "./ArticleCard";
+import { ErrorPage } from "./ErrorPage";
 
 export const TopicSpecificArticlesList = () => {
     const { topic } = useParams();
@@ -10,6 +11,7 @@ export const TopicSpecificArticlesList = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [sortBy, setSortBy] = useState("created_at");
     const [orderBy, setOrderBy] = useState("DESC");
+    const [err, setErr] = useState(null);
 
     useEffect(() => {
         getTopics()
@@ -25,11 +27,16 @@ export const TopicSpecificArticlesList = () => {
             .then((data) => {
                 setArticlesListByTopic(data);
                 setIsLoading(false);
-            }).catch((err) => {
-                setIsLoading(false);
-            });
+            })
+            .catch((err) => {
+                setErr(err.response);
+            })
         }
     }, [topic, sortBy, orderBy]);
+
+    if(err) {
+        return <ErrorPage message={err.data.msg} status={err.status}/>
+    }
 
     if (isLoading) {
         return <p>Please wait whilst your articles load...</p>;

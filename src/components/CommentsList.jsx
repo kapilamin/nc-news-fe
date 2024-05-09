@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom"
 import { CommentCard } from "./CommentCard";
 import { getCommentsByArticleId, postNewComment } from '../api';
 import { UserContext } from "../contexts/User";
+import { ErrorPage } from "./ErrorPage";
 
 export const CommentsList = () => {
     const {article_id} = useParams();
-    const [commentsList, setCommentsList] = useState();
+    const [commentsList, setCommentsList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const {loggedInUser, setLoggedInUser} = useContext(UserContext);
     const [newComment, setNewComment] = useState ({
@@ -22,6 +23,9 @@ export const CommentsList = () => {
         .then ((data) => {
             setCommentsList(data)
             setIsLoading(false)
+            .catch((err) => {
+                setErr(err.response)
+            })
         })
     }, [])
 
@@ -41,8 +45,8 @@ export const CommentsList = () => {
             setCommentSuccess(true)
             setErr(null);
         })
-        .catch((error) => {
-            setErr("Sorry there has been an error. Please try again")
+        .catch((err) => {
+            alert("Comment could not be posted 🙁 Please try again!")
         });
         
         setCommentSuccess(false)
@@ -50,6 +54,10 @@ export const CommentsList = () => {
             username: loggedInUser.username,
             body: ""
         })
+    }
+
+    if(err) {
+        return <ErrorPage message={err.data.msg} status={err.status} />
     }
         
 

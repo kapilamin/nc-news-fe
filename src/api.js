@@ -43,3 +43,8 @@ export const getTopics = () => {
     .then((response) => {
         return response.data.topicsArr;})
 }
+
+export const getUsers = () => {
+    return ncNewsApi.get("users")
+    .then(handleResponse)
+}
