@@ -28,9 +28,9 @@ export const updateArticleVotes = (article_id, inc_votes) => {
     .then(handleResponse);
 }
 
-export const postNewComment = (article_id, newComment) => {
+export const postNewComment = (newComment, article_id) => {
     return ncNewsApi.post(`articles/${article_id}/comments`, newComment)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 export const deleteCommentById = (comment_id) => {

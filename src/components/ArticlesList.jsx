@@ -15,10 +15,13 @@ export const ArticlesList = () => {
             setArticlesList(data);
             setIsLoading(false);
         })
+        .catch(error => {
+            console.error('Failed to fetch articles', error);
+        })
     }, [sortBy, orderBy]);
 
     if(isLoading) {
-        return <p>Please wait whilst the news loads...</p>
+        return <p>Please wait whilst the articles are fetched...</p>
     }
 
     return (
@@ -37,12 +40,12 @@ export const ArticlesList = () => {
                     <option value="author">Author</option>
                     <option value="created_at">Date created</option>
                     <option value="votes">Vote count</option>
-                    <option value="article_img_url">Image url</option>
+                    <option value="comment_count">Comment count</option>
                 </select>    
             </section>
             <section id="order-by-selector">
                 <select 
-                    id="article-list-sort-by"
+                    id="article-list-order-by"
                     value={orderBy}
                     onChange={(e) => {
                         setOrderBy(e.target.value)

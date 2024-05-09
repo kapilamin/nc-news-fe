@@ -41,7 +41,7 @@ export const CommentsList = () => {
             setCommentSuccess(true)
             setErr(null);
         })
-        .catch((err) => {
+        .catch((error) => {
             setErr("Sorry there has been an error. Please try again")
         });
         
