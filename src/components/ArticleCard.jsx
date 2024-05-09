@@ -30,7 +30,7 @@ export const ArticleCard = ({article}) => {
     return (
         <article className="article-card">
             <Link to={`/ncnews/${article.article_id}`}>
-            <section id="article-card-content">
+            <section className="article-card-content">
                 <li>
                     <h3>{article.title}</h3>
                     <img className='article-image' src={article.article_img_url} alt="image of the article"/>
