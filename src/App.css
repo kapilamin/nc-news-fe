@@ -53,6 +53,20 @@
   border-radius: 10px;
 }
 
+.topic-list-item {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding: 10px 10px;
+  margin: 20px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #83B692;
+  cursor: pointer;
+}
 
 .link-container {
   flex: 0 0 75%;
@@ -133,6 +147,8 @@ img {
   border: none;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1rem;
+  cursor: pointer;
+
 }
 
 #delete-comment-button {
@@ -145,4 +161,5 @@ img {
   font-size: 1rem;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
+  cursor: pointer;
 }

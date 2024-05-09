@@ -4,44 +4,42 @@ const ncNewsApi = axios.create({
     baseURL: "https://nc-news-xwbn.onrender.com/api/"
 });
 
-export const getArticles = () => {
-    return ncNewsApi.get("articles")
-    .then((response) => {
-        return response.data
-    })
+const handleResponse = (response) => response.data;
+
+export const getArticles = (topic) => {
+    return ncNewsApi.get("articles", {
+        params: { topic }
+    }).then(handleResponse);
 }
+
 
 export const getArticlesById = (article_id) => {
     return ncNewsApi.get(`articles/${article_id}`)
-    .then((response) => {
-        return response.data;
-    })
+    .then(handleResponse);
 }
 
 export const getCommentsByArticleId = (article_id) => {
     return ncNewsApi.get(`articles/${article_id}/comments`)
-    .then((response) => {
-        return response.data
-    })
+    .then(handleResponse);
 }
 
 export const updateArticleVotes = (article_id, inc_votes) => {
-    return ncNewsApi.patch(`articles/${article_id}`, {article_id: article_id, inc_votes: inc_votes})
-    .then((response) => {
-        return response.data
-    })
+    return ncNewsApi.patch(`articles/${article_id}`, { inc_votes })
+    .then(handleResponse);
 }
 
-export const postNewComment = (newComment, article_id) => {
+export const postNewComment = (article_id, newComment) => {
     return ncNewsApi.post(`articles/${article_id}/comments`, newComment)
-    .then((response) => {
-        return response.data
-    })
+    .then(handleResponse);
 }
 
 export const deleteCommentById = (comment_id) => {
     return ncNewsApi.delete(`comments/${comment_id}`)
+    .then(handleResponse);
+}
+
+export const getTopics = () => {
+    return ncNewsApi.get("topics")
     .then((response) => {
-        return response.data
-    })
+        return response.data.topicsArr;})
 }

@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState } from "react";
 import { getArticles } from "../api";
 import { ArticleCard } from "./ArticleCard";
 
@@ -21,13 +20,15 @@ export const ArticlesList = () => {
     }
 
     return (
-        <section className="articles-list">
-            <ul>
-                {articlesList.map((article) => {
-                    return <ArticleCard article={article} key={article.article_id}/>
-                })}
-            </ul>
-        </section>
+        <>
+            <section className="articles-list">
+                <ul>
+                    {articlesList.map((article) => {
+                        return <ArticleCard article={article} key={article.article_id}/>
+                    })}
+                </ul>
+            </section>
+        </>
     )
 }
 
