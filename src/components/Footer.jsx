@@ -1,15 +1,10 @@
-import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className="footer">
-      <nav>
-        <Link to={"https://www.instagram.com/"} target={"_blank"}>
-            <p>Instagram</p>
-        </Link>
-        <Link to={"https://twitter.com/"} target={"_blank"}>
-            <p>X</p>
-        </Link>
+      <nav id="footer-links-container">
+        <a href="https://www.x.com" target="_blank"><img src="../icons/twitter.png"></img></a>
+        <a href="https://www.instagram.com" target="blank"><img src="../icons/instagram.png"></img></a>
       </nav>
     </footer>
   );

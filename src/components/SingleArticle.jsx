@@ -13,6 +13,7 @@ export const SingleArticle = () => {
     const [voteChange, setVoteChange] = useState(0)
     const [err, setErr] = useState(null);
 
+
     useEffect (() => {
         setIsLoading(true);
         getArticlesById(article_id)

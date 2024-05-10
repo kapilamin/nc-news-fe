@@ -54,7 +54,7 @@ export const TopicSpecificArticlesList = () => {
                     })}
             </ul>
 
-            <section id="sort-articles-selector">
+            <section id="sort-articles-container">
                 <p>Sort articles by:</p>
                 <select 
                     id="article-list-sort-by" 
@@ -66,8 +66,6 @@ export const TopicSpecificArticlesList = () => {
                     <option value="votes">Vote count</option>
                     <option value="comment_count">Comment count</option>
                 </select>
-            </section>
-            <section id="order-by-selector">
                 <select 
                     id="article-list-order-by" 
                     value={orderBy} 

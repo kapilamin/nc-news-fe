@@ -1,5 +1,5 @@
 #root {
-  max-width: 760px;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -12,18 +12,18 @@ a {
 }
 
 .header-container {
-  background-color: #54c4f0;
+  background-color: #c3dee8;
   color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
 }
 
 .user-info {
-  margin-left: 400px;
-  margin-bottom: 10px;
+  margin-left: 25rem;
+  margin-bottom: 0.625rem;
   color: #061463;
 }
 
@@ -38,9 +38,9 @@ a {
   font-size: 30px;
   color: #342bdd;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding-top: 0.625rem;
+  padding-bottom: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .nc-news-title:hover {
@@ -49,14 +49,14 @@ a {
 
 .link-container {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .header-link {
   background-color: #ff0000;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -66,12 +66,17 @@ a {
   color: rgb(244, 236, 31);
 }
 
-
-
-
 .articles-list {
   display: flex;
   justify-content: center;
+}
+
+#article-list-sort-by {
+  margin: 0.6rem;
+}
+
+#article-list-order-by {
+  margin: 0.625rem;
 }
 
 .article-link {
@@ -82,15 +87,21 @@ a {
 .article-card {
   display: inline-block;
   background: rgb(212, 220, 245);
-  padding: 1em;
+  padding: 0.5em, 0.5em;
   margin: 1em 1em;
   width: 20em;
-  height: 33em;
+  height: 35em;
   border: #2a83f0;
-  border-width: 0.1cm;
+  border-width: 0.24rem;
   object-fit: cover;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+  align-content: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   text-decoration: none;
 }
 
@@ -107,20 +118,20 @@ a {
 }
 
 .single-article-image {
-  border-radius: 10px;
-  height: 400px;
+  border-radius: 0.625rem;
+  max-width: 80%; 
+  height: auto; 
 }
 
 .single-article{
-  display: inline-block;
   background: rgb(212, 220, 245);
-  padding: 2em !important;
+  padding: 2em;
   margin: 1em 1em;
-  width: fit-content;
+  width: auto;
   height: auto;
   font-family: "Lucida Console", "Courier New", monospace;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 
@@ -129,14 +140,15 @@ a {
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
-  font-family: "Lucida Console", "Courier New", monospace;
-  padding: 10px 10px;
+  font-family: 'Cascadia Code', monospace;
+  padding: 0px 10px 20px 10px;
   margin: 20px;
   display: inline-flex;
   text-decoration: none;
   border-radius: 10px;
   background-color: #9f47f7;
   cursor: pointer;
+  height: 40px;
 }
 
 .topic-list-item:hover {
@@ -164,6 +176,8 @@ a {
 
 ul {
   list-style-type: none;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 .button-up {
@@ -201,6 +215,19 @@ ul {
   background-color: #be4934;
 }
 
+.hide-view-comments-button {
+  background: #dc9b0f;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 1em 1em;
+  border-radius: 0.3125rem;
+  border: none;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .add-comment-form {
   display: flex;
   flex-direction: column;
@@ -229,8 +256,8 @@ ul {
 .comment-card {
   background-color: rgb(158, 200, 239);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  padding: 1rem;
+  margin: 1.25rem;
 }
 .add-new-comment-submit{
   background: #0fdc50;
@@ -238,7 +265,7 @@ ul {
   font-weight: bold;
   padding: 0.5em 1em;
   margin: 1em 1em;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   border: none;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1rem;
@@ -255,7 +282,7 @@ ul {
   color: white;
   padding: 0.5em 1em;
   margin: 1em 1em;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -269,12 +296,12 @@ ul {
 
 .user-list-item {
   display: inline-grid;
-  width: 150px;
-  margin: 15px;
-  padding: 10px;
-  border: 3px solid #83B692;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+  width: 10rem;
+  margin: 1rem;
+  padding: 0.625rem;
+  border: 0.2rem solid #83B692;
+  background-color: whitesmoke;
+  border-radius: 0.625rem;
   align-content: space-around;
   justify-content: space-evenly;
   justify-items: center;
@@ -282,7 +309,7 @@ ul {
 }
 
 #user-image {
-  height: 100px;
+  height: 6.25rem;
 }
 
 #user {
@@ -290,7 +317,7 @@ ul {
 }
 
 #article-card-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #1464c7;
 }
 
@@ -311,10 +338,23 @@ ul {
   font-weight: bold;
   font-size: 1rem;
   font-family: "Lucida Console", "Courier New", monospace;
-  padding: 14px 16px;
+  padding: 0.88rem 1rem;
   display: block;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 0.31rem;
   background-color: #de4c39;
   cursor: pointer;
+}
+
+.footer {
+  background-color: #c3dee8;
+  border-radius: 0.31rem;
+}
+
+#footer-links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }

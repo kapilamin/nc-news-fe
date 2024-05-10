@@ -33,7 +33,7 @@ export const ArticlesList = () => {
 
     return (
         <>
-            <section id="sort-articles-selector">
+            <section id="sort-articles-container">
                 <p>Sort articles by:</p>
                 <select 
                     id="article-list-sort-by"
@@ -49,8 +49,6 @@ export const ArticlesList = () => {
                     <option value="votes">Vote count</option>
                     <option value="comment_count">Comment count</option>
                 </select>    
-            </section>
-            <section id="order-by-selector">
                 <select 
                     id="article-list-order-by"
                     value={orderBy}
@@ -58,11 +56,10 @@ export const ArticlesList = () => {
                         setOrderBy(e.target.value)
                     }}
                 >
-                <option value="asc">Ascending</option>
-                <option value="desc">Descending</option>    
-            </select>    
+                    <option value="asc">Ascending</option>
+                <   option value="desc">Descending</option>    
+                </select> 
             </section>
-
             <section className="articles-list">
                 <ul>
                     {articlesList.map((article) => {
