@@ -344,7 +344,6 @@ ul {
 
 .footer {
   background-color: #c3dee8;
-  color: #24b717;
   border-radius: 0.31rem;
 }
 
@@ -354,4 +353,9 @@ ul {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
+  font-size: medium;
+}
+
+#footer-links-container a {
+  color: black;
 }
