@@ -16,10 +16,14 @@ API:    https://nc-news-xwbn.onrender.com/api
 
 Github: https://github.com/kapilamin/nc-news
 
+## Take a look at the app
+
+The app is hosted on Netlify [HERE](https://kapilamin-ncnews.netlify.app/) so please take a look.
+
 ## To run this project locally
 1. Ensure that you have Node.js installed (see below for minimum requirements)
 
-Instructions for installation of Node and NPM can be found [HERE] (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+Instructions for installation of Node and NPM can be found [HERE](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 2. Clone this repo:
     ```
