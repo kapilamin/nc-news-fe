@@ -348,6 +348,7 @@ ul {
 }
 
 #footer-links-container {
+  padding-top: 0.4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
