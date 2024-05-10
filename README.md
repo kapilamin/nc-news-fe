@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As part of *Northcoder's Skills Bootcamp in Software Development*, we were tasked with building a C.R.U.D. application frontend which uses information from my [backend project](https://github.com/M1nhnho/be-nc-news). This app allows clients to view articles, grouped under topics, along with comments and the users behind them - akin to Reddit or similar news services.
+As part of *Northcoder's Skills Bootcamp in Software Development*, we were tasked with building a C.R.U.D. application frontend which uses information from my [backend project](https://github.com/kapilamin/nc-news). This app allows clients to view articles, grouped under topics, along with comments and the users behind them - akin to Reddit or similar news services.
 
 This frontend project was built in HTML, CSS, and Javascript using [React](https://react.dev/) to enable easier management by splitting parts into reusable components that can be conditionally rendered. Additionally, error handling has been implemented and various in-built hooks have been used along with my custom hook to detect window size. Moreover, [Axios](https://axios-http.com/) was used to access the backend API. Responsiveness was also kept in consideration and [WAVE](https://wave.webaim.org/) was used for accessibility to conform to WCAG 2.2 at Level AA.
 
