@@ -18,12 +18,15 @@ Github: https://github.com/kapilamin/nc-news
 
 ## To run this project locally
 1. Ensure that you have Node.js installed (see below for minimum requirements)
+
 Instructions for installation of Node and NPM can be found [HERE] (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
 2. Clone this repo:
     ```
     git clone https://github.com/kapilamin/nc-news-fe
     ```
 3. Navigate to the folder: cd fe-nc-news
+
 4. Install all dependencies required: 
     ```
     npm install
