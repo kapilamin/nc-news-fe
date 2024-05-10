@@ -52,17 +52,9 @@ a {
   gap: 0.625rem;
 }
 
-.header-link {
-  background-color: #af1111 !important;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
 
 .header-link:hover {
-  background-color: #84339b !important;
+  background-color: #84339b;
   color: rgb(244, 236, 31);
 }
 
@@ -346,12 +338,13 @@ ul {
   display: block;
   text-decoration: none;
   border-radius: 0.31rem;
-  background-color: #de4c39;
+  background-color: #af1111;
   cursor: pointer;
 }
 
 .footer {
   background-color: #c3dee8;
+  color: #24b717;
   border-radius: 0.31rem;
 }
 
